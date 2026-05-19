@@ -1,0 +1,258 @@
+{
+  "n_splits": 5,
+  "trial_names": [
+    "baseline_sched_cv",
+    "baseline_seed7_cv",
+    "lower_batch_cv"
+  ],
+  "configs": [
+    {
+      "trial_name": "baseline_sched_cv",
+      "config": {
+        "name": "baseline_sched",
+        "n_d": 16,
+        "n_a": 16,
+        "n_steps": 4,
+        "gamma": 1.3,
+        "lambda_sparse": 1e-05,
+        "momentum": 0.03,
+        "n_shared": 2,
+        "n_independent": 2,
+        "clip_value": 2,
+        "optimizer_params": {
+          "lr": 0.015,
+          "weight_decay": 1e-05
+        },
+        "mask_type": "entmax",
+        "scheduler": {
+          "name": "step_lr",
+          "params": {
+            "step_size": 25,
+            "gamma": 0.9
+          }
+        },
+        "batch_size": 1024,
+        "virtual_batch_size": 128,
+        "device_name": "cpu"
+      },
+      "trial_seed": 42,
+      "oof_accuracy": 0.8073162314505924,
+      "avg_best_epoch": 54.0,
+      "folds": [
+        {
+          "fold": 1,
+          "fold_seed": 42,
+          "best_epoch": 48,
+          "valid_accuracy": 0.8079355951696378,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_sched_cv/fold_1/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 2,
+          "fold_seed": 43,
+          "best_epoch": 27,
+          "valid_accuracy": 0.8217366302472685,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_sched_cv/fold_2/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 3,
+          "fold_seed": 44,
+          "best_epoch": 77,
+          "valid_accuracy": 0.8050603795284647,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_sched_cv/fold_3/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 4,
+          "fold_seed": 45,
+          "best_epoch": 46,
+          "valid_accuracy": 0.8072497123130035,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_sched_cv/fold_4/tabnet_model.zip",
+          "valid_rows": 1738,
+          "train_rows": 6955
+        },
+        {
+          "fold": 5,
+          "fold_seed": 46,
+          "best_epoch": 72,
+          "valid_accuracy": 0.7945914844649021,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_sched_cv/fold_5/tabnet_model.zip",
+          "valid_rows": 1738,
+          "train_rows": 6955
+        }
+      ]
+    },
+    {
+      "trial_name": "baseline_seed7_cv",
+      "config": {
+        "name": "baseline_seed7",
+        "n_d": 16,
+        "n_a": 16,
+        "n_steps": 4,
+        "gamma": 1.3,
+        "lambda_sparse": 1e-05,
+        "momentum": 0.03,
+        "n_shared": 2,
+        "n_independent": 2,
+        "clip_value": 2,
+        "optimizer_params": {
+          "lr": 0.015,
+          "weight_decay": 1e-05
+        },
+        "mask_type": "entmax",
+        "scheduler": {
+          "name": "step_lr",
+          "params": {
+            "step_size": 25,
+            "gamma": 0.9
+          }
+        },
+        "batch_size": 1024,
+        "virtual_batch_size": 128,
+        "device_name": "cpu"
+      },
+      "trial_seed": 49,
+      "oof_accuracy": 0.8072011963648913,
+      "avg_best_epoch": 50.0,
+      "folds": [
+        {
+          "fold": 1,
+          "fold_seed": 49,
+          "best_epoch": 43,
+          "valid_accuracy": 0.8016101207590569,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_seed7_cv/fold_1/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 2,
+          "fold_seed": 50,
+          "best_epoch": 71,
+          "valid_accuracy": 0.816561242093157,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_seed7_cv/fold_2/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 3,
+          "fold_seed": 51,
+          "best_epoch": 51,
+          "valid_accuracy": 0.8073605520414031,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_seed7_cv/fold_3/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 4,
+          "fold_seed": 52,
+          "best_epoch": 49,
+          "valid_accuracy": 0.8118527042577676,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_seed7_cv/fold_4/tabnet_model.zip",
+          "valid_rows": 1738,
+          "train_rows": 6955
+        },
+        {
+          "fold": 5,
+          "fold_seed": 53,
+          "best_epoch": 36,
+          "valid_accuracy": 0.7986191024165707,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/baseline_seed7_cv/fold_5/tabnet_model.zip",
+          "valid_rows": 1738,
+          "train_rows": 6955
+        }
+      ]
+    },
+    {
+      "trial_name": "lower_batch_cv",
+      "config": {
+        "name": "lower_batch",
+        "n_d": 16,
+        "n_a": 16,
+        "n_steps": 4,
+        "gamma": 1.3,
+        "lambda_sparse": 1e-05,
+        "momentum": 0.03,
+        "n_shared": 2,
+        "n_independent": 2,
+        "clip_value": 2,
+        "optimizer_params": {
+          "lr": 0.015,
+          "weight_decay": 1e-05
+        },
+        "mask_type": "entmax",
+        "scheduler": {
+          "name": "step_lr",
+          "params": {
+            "step_size": 25,
+            "gamma": 0.9
+          }
+        },
+        "batch_size": 512,
+        "virtual_batch_size": 64,
+        "device_name": "cpu"
+      },
+      "trial_seed": 42,
+      "oof_accuracy": 0.8096169331646152,
+      "avg_best_epoch": 30.8,
+      "folds": [
+        {
+          "fold": 1,
+          "fold_seed": 42,
+          "best_epoch": 33,
+          "valid_accuracy": 0.7998849913743531,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/lower_batch_cv/fold_1/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 2,
+          "fold_seed": 43,
+          "best_epoch": 34,
+          "valid_accuracy": 0.8263369752731455,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/lower_batch_cv/fold_2/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 3,
+          "fold_seed": 44,
+          "best_epoch": 26,
+          "valid_accuracy": 0.8062104657849338,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/lower_batch_cv/fold_3/tabnet_model.zip",
+          "valid_rows": 1739,
+          "train_rows": 6954
+        },
+        {
+          "fold": 4,
+          "fold_seed": 45,
+          "best_epoch": 26,
+          "valid_accuracy": 0.806674338319908,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/lower_batch_cv/fold_4/tabnet_model.zip",
+          "valid_rows": 1738,
+          "train_rows": 6955
+        },
+        {
+          "fold": 5,
+          "fold_seed": 46,
+          "best_epoch": 35,
+          "valid_accuracy": 0.80897583429229,
+          "saved_model": "tabnet_groupcv_runs_fe_signal_v1/lower_batch_cv/fold_5/tabnet_model.zip",
+          "valid_rows": 1738,
+          "train_rows": 6955
+        }
+      ]
+    }
+  ],
+  "best_weight": {
+    "weight_baseline_sched_cv": 0.24,
+    "weight_baseline_seed7_cv": 0.31,
+    "weight_lower_batch_cv": 0.45,
+    "accuracy": 0.816864143563787
+  },
+  "ensemble_oof_accuracy": 0.816864143563787,
+  "submission_path": "tabnet_groupcv_runs_fe_signal_v1/fe_signal_v1_3model_groupcv_ensemble_submission.csv"
+}
